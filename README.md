@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ReduxSimpleStarter
 
 ###Getting Started###
@@ -21,3 +22,7 @@ Click [here](https://github.com/StephenGrider/ReactStarter/releases) then downlo
 	> npm install
 	> npm start
 ```
+=======
+# BrackOverflow
+Brack Overflow React Project
+>>>>>>> ea6535bd9b561e752c6df7d053ab198e02551fd9
