@@ -2,7 +2,7 @@
   "name": "redux-simple-starter",
   "version": "1.0.0",
   "description": "Simple starter package for Redux with React and Babel support",
-  "main": "index.js",
+  "main": "server/server.js",
   "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
@@ -18,11 +18,17 @@
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
+    "axios": "^0.9.1",
     "babel-preset-stage-1": "^6.1.18",
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
     "lodash": "^3.10.1",
+    "mongoose": "^4.4.4",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-redux": "^4.0.0",
-    "redux": "^3.0.4"
+    "react-router": "^2.0.0-rc5",
+    "redux": "^3.0.4",
+    "redux-promise": "^0.5.1"
   }
 }
