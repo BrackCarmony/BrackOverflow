@@ -21,7 +21,8 @@ app.use(express.static(__dirname + '/../public'));
 
 var port = 8080;
 
-app.get('/api/questions', questionCtrl.show);
+app.get('/api/questions', questionCtrl.index);
+app.get('/api/questions/:id', questionCtrl.show);
 app.post('/api/questions', questionCtrl.create);
 
 app.listen(port, function(){

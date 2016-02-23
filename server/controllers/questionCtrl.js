@@ -28,7 +28,7 @@ var Question = require('./../models/Question');
 
 
 module.exports = {
-  show:function(req, res){
+  index:function(req, res){
     Question.find({}).exec(function(err, questions){
       if(err){
         console.log(err);
@@ -36,6 +36,15 @@ module.exports = {
       }
       console.log(questions);
       res.send(questions);
+    })
+  },
+  show:function(req, res){
+    Question.findById(req.params.id).exec(function(err, result){
+      if(err){
+        console.log(err);
+        return res.sendStatus(500);
+      }
+      res.send(result)
     })
   },
   create:function(req,res){

@@ -1,0 +1,33 @@
+.questionListItem{
+  background-color: teal;
+  width:100%
+}
+
+.questionListItem .tags div{
+  width:5em;
+  outline: 1px solid #131313;
+  float:left;
+}
+.questionListItem .tags div span{
+  display: block;
+  text-align: center;
+
+}
+
+.clearfix {
+  visibility: hidden;
+	display: block;
+	font-size: 0;
+	clear: both;
+	height: 0;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}

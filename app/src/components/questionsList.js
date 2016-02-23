@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { Link } from 'react-router';
 import QuestionListItem from './questionListItem'
 import { addQuestion, getQuestions } from '../actions/';
+
 
 
 class QuestionsList extends Component{
@@ -19,7 +21,15 @@ class QuestionsList extends Component{
           onClick = {() => this.props.addQuestion({title:'newQuestion', votes:0, views:0, answers:0})}>
           Push Me!
         </button>
-        {this.props.questions.map(question => (<QuestionListItem onClickEvent = {this.onClick.bind(question)} key = {question.title} question = {question}></QuestionListItem>))}
+        {this.props.questions.map(question => (
+          <Link to={"questions/"+ question._id} key = {question._id}>
+            <QuestionListItem
+              onClickEvent = {this.onClick.bind(question)}
+
+              question = {question}>
+            </QuestionListItem>
+          </Link>
+        ))}
       </ul>
     )
   }

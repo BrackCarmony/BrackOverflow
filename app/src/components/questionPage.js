@@ -1,44 +1,29 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import QuestionListItem from './questionListItem'
-import { addQuestion, getQuestions } from '../actions/';
+import {connect} from 'react-redux';
 
 
-class QuestionsList extends Component{
+import {fetchQuestion} from '../actions/index';
+import {Link} from 'react-router';
 
+class QuestionPage extends Component{
   componentWillMount(){
-    console.log("Get Stuff Here");
-    this.props.getQuestions();
+    this.props.fetchQuestion(this.props.params.id);
   }
 
   render(){
     return (
-      <ul>
-        <button
-          onClick = {() => this.props.addQuestion({title:'newQuestion', votes:0, views:0, answers:0})}>
-          Push Me!
-        </button>
-        {this.props.questions.map(question => (<QuestionListItem onClickEvent = {this.onClick.bind(question)} key = {question.title} question = {question}></QuestionListItem>))}
-      </ul>
-    )
-  }
-
-  onClick(){
-    console.log("Alert");
-    console.log(this);
+      <div>
+        <Link to = "/"> Brack Overflow </Link>
+        <div>{this.props.question.title}</div>
+        <div>{this.props.question.body}</div>
+        <div>{this.props.question.answers}</div>
+      </div>)
   }
 }
+
 
 function mapStateToProps(state){
-  console.log("Mapping State", state);
-  return {
-    questions:state.questions
-  };
+  return {question:state.currentQuestion};
 }
 
-function mapDispatchToProps(dispatch){
-  return bindActionCreators({ addQuestion:addQuestion, getQuestions:getQuestions }, dispatch);
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(QuestionsList)
+export default connect (mapStateToProps, {fetchQuestion})(QuestionPage);
