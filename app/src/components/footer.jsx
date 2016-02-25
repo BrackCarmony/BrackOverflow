@@ -5,7 +5,7 @@ export default class footer extends Component{
     console.log("Test2");
     return (
       <div>
-        I be footer
+        
       </div>
     )
   }

@@ -7,9 +7,12 @@ export default class homePage extends Component{
   render(){
     return (
       <div>
-      This is Main Page
-        <QuestionsList />
-        <InfoBox />
+        <div className = "contain">
+          <InfoBox />
+          <div className="card">
+            <QuestionsList />
+          </div>
+        </div>
       </div>
     )
   }

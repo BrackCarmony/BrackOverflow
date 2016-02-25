@@ -5,6 +5,7 @@ import {createStore, applyMiddleware } from 'redux';
 import ReduxPromise from 'redux-promise';
 import { Router, hashHistory } from 'react-router';
 // import { createStore, applyMiddleware } from 'redux';
+var css = require("./styles/styles.scss");
 
 import App from './components/app.js'
 

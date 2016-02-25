@@ -16,11 +16,7 @@ class QuestionsList extends Component{
 
   render(){
     return (
-      <ul>
-        <button
-          onClick = {() => this.props.addQuestion({title:'newQuestion', votes:0, views:0, answers:0})}>
-          Push Me!
-        </button>
+      <ul className = "questionList">
         {this.props.questions.map(question => (
           <Link to={"questions/"+ question._id} key = {question._id}>
             <QuestionListItem
