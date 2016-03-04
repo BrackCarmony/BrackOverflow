@@ -1,3 +1,15 @@
+
+$background-color:#fafafa;
+$primary-color:#dedede;
+$dark-color-dark:#151515;
+$secondary-color:saddlebrown;
+$accent-color:teal;
+$action-color:slategrey;
+$warning-color:yellow;
+$dark-color:darkslategrey;
+
+
+
 html,
 body,
 div,
@@ -85,6 +97,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -102,6 +115,7 @@ section {
 }
 body {
   line-height: 1;
+  background-color: $background-color;
 }
 ol,
 ul {
@@ -130,7 +144,7 @@ a:hover {
 }
 .card {
   border: 1px #dfdfdf solid;
-  background-color: #fafafa;
+  background-color: $primary-color;
   margin: 10px;
   padding: 10px;
 }
@@ -142,11 +156,20 @@ a:hover {
 .emptyButton {
   background-color: inhert;
   padding: 5px;
-  border: 1px solid blue;
+  border: 1px solid $action-color;
   font-size: 1.1em;
   border-radius: 20px;
   display: inline-block;
-  color: blue;
+  color: $action-color;
+}
+
+.solidButton {
+	color: #fff;
+	background-color: $action-color;
+	border-color: #07c;
+	box-shadow: inset 0 1px 0 #66bfff;
+  padding:7px;
+  display:inline-block;
 }
 
 .infoBox .card div{
@@ -156,7 +179,7 @@ a:hover {
 .navBar {
   position: relative;
   padding: 10px 5px;
-  background-color: #fafafa;
+  background-color: $primary-color;
   .logo {
     font-size: 1em;
     font-kerning: none;
@@ -178,7 +201,7 @@ a:hover {
   list-style: none;
 }
 .questionListItem {
-  background-color: #ffd;
+  background-color: $primary-color;
   width: 100%;
   margin-bottom: 3px;
   span:link {
@@ -195,7 +218,7 @@ a:hover {
     div {
       width: 3.5em;
       font-size: 15px;
-      background-color: #131313;
+      background-color: $dark-color;
       float: left;
       padding: 5px;
       outline: 0.25px solid #ddd;
@@ -203,11 +226,11 @@ a:hover {
         display: block;
         text-align: center;
         font-variant: small-caps;
-        color: #efd;
+        color: $primary-color;
       }
     }
     div:hover {
-      background-color: #313131;
+      background-color: $dark-color-dark;
       float: left;
       padding: 5px;
       outline: 0.25px solid #eee;
@@ -230,4 +253,77 @@ a:hover {
 }
 .cf:after {
   clear: both;
+}
+
+.shownModal{
+	position:fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	margin:auto;
+	width:300px;
+	height:300px;
+	background-color: $background-color;
+	transition: 1s;
+	overflow:hidden;
+}
+
+.hiddenModal{
+	position:fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	margin:auto;
+	height:0px;
+	overflow: hidden;
+}
+
+.darkScreen{
+	position: fixed;
+	width:100vw;
+	height:100vh;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	margin:auto;
+	background-color: rgba(10,10,10,.5);
+	transition: background-color 1s;
+}
+
+.shownModal .cancel{
+	color: green;
+	font-size: 12;
+	position: absolute;
+	right:10px;
+	top:10px;
+}
+
+.centerDiv{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin: auto;
+  height:50%;
+  width:50%;
+}
+
+.register input{
+  width:60%;
+  display: block;
+  margin: 5px auto;
+}
+
+.register button{
+  margin: 4px auto;
+  display: block;
+}
+.smallButton {
+  font-size: .5em;
+  padding: 3px;
+  margin-top: 30px;
 }

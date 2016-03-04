@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import QuestionsList from './questionsList.js'
-import InfoBox from './infoBox.js'
+import QuestionsList from './questionsList'
+import InfoBox from './infoBox'
 
 export default class homePage extends Component{
   render(){

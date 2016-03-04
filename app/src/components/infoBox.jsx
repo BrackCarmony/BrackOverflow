@@ -9,7 +9,7 @@ export default class infoBox extends Component{
           <div>
           Brack Overflow is a community of /get num users/ programmers, just like you, being helped by Brack.
           </div>
-          <div className = "emptyButton">Sign Up</div>
+          <div className = "solidButton">Sign Up</div>
         </div>
       </div>
     )

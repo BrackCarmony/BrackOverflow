@@ -7,7 +7,7 @@ export default class questionsListItem extends Component{
         <div className = "cf">
           <div className = "tags cf">
             <div>
-              <span>{this.props.question.answers}</span><span>answers</span>
+              <span>{this.props.question.answers.length}</span><span>answers</span>
             </div>
             <div>
               <span>{this.props.question.votes}</span><span>votes</span>

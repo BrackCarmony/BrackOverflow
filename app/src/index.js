@@ -7,10 +7,10 @@ import { Router, hashHistory } from 'react-router';
 // import { createStore, applyMiddleware } from 'redux';
 var css = require("./styles/styles.scss");
 
-import App from './components/app.js'
+import App from './components/app'
 
-import routes from  './routes.js';
-import reducers from './reducers/index.js'
+import routes from  './routes';
+import reducers from './reducers/index'
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 //import App from './components/app';

@@ -10,7 +10,7 @@ export default function( state = def, action){
 
       return [action.payload, ...state];
     case 'GOT_INITIAL_QUESTIONS':
-      console.log(action);
+      console.log('Reducing questions...', action);
     return action.payload.data;
   }
   console.log(state);
